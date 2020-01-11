@@ -74,6 +74,9 @@ class TestStrategy(bt.Strategy):
         # Simply log the closing price of the series from the reference
         self.log('Close, %.2f' % self.dataclose[0])
 
+        self.log('DrawDown: %.2f' % self.stats.drawdown.drawdown[-1])
+        self.log('MaxDrawDown: %.2f' % self.stats.drawdown.maxdrawdown[-1])
+
         # Check if an order is pending ... if yes, we cannot send a 2nd one
         if self.order:
             return
@@ -130,6 +133,9 @@ if __name__ == '__main__':
 
     # Set the commission
     cerebro.broker.setcommission(commission=0.001)
+
+    # Add Observer
+    cerebro.addobserver(bt.observers.DrawDown)
 
     # Print out the starting conditions
     print('Starting Portfolio Value: %.2f' % cerebro.broker.getvalue())
