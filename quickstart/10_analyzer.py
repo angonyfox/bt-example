@@ -143,4 +143,4 @@ if __name__ == '__main__':
     # Print out the final result
     print('Final Portfolio Value: %.2f' % cerebro.broker.getvalue())
 
-    print('Sharpe Ratio:', result[0].analyzers.mysqn.get_analysis())
+    print('SQN:', result[0].analyzers.mysqn.get_analysis())
