@@ -33,7 +33,7 @@ if __name__ == '__main__':
     # Add a strategy
     cerebro.addstrategy(TestStrategy)
 
-    datapath = './datas/orcl-1995-2014.txt'
+    datapath = '../datas/orcl-1995-2014.txt'
 
     # Create a Data Feed
     data = bt.feeds.YahooFinanceCSVData(

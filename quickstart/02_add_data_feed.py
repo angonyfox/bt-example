@@ -12,7 +12,7 @@ if __name__ == '__main__':
     # Create a cerebro entity
     cerebro = bt.Cerebro()
 
-    datapath = './datas/orcl-1995-2014.txt'
+    datapath = '../datas/orcl-1995-2014.txt'
 
     # Create a Data Feed
     data = bt.feeds.YahooFinanceCSVData(
