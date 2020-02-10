@@ -91,7 +91,7 @@ def runstrat():
 
 def parse_args():
 	parser = argparse.ArgumentParser(
-		description='Resample down to minutes')
+		description='Lifecycle')
 
 	parser.add_argument('--noresample', action='store_true',
 						help='Do not resample, rather load larger timeframe')

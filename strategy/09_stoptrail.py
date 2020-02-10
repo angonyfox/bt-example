@@ -41,13 +41,13 @@ class TrailStrategy(bt.Strategy):
                 trigger_price = self.data.close - self.p.trailamount
             else:
                 trigger_price = self.data.close * (1.0 - self.p.trailpercent)
-            print(colorama.Fore.RED + f"{self.datetime.date()}: Close: {round(self.data.close[0],2)}, Price: {round(self.order.created.price,2)}, Trigger Price: {round(trigger_price,2)}" + colorama.Fore.RESET)
+            print(colorama.Fore.RED + f"{self.datetime.date()}: Close: {round(self.data.close[0],2)}, Trigger Price: {round(self.order.created.price,2)}, Ideal Trigger Price: {round(trigger_price,2)}" + colorama.Fore.RESET)
         else:
             if self.p.trailamount:
                 trigger_price = self.data.close - self.p.trailamount
             else:
                 trigger_price = self.data.close * (1.0 - self.p.trailpercent)
-            print(colorama.Fore.RED + f"{self.datetime.date()}: Close: {round(self.data.close[0],2)}, Price: {round(self.order.created.price,2)}, Trigger Price: {round(trigger_price,2)}" + colorama.Fore.RESET)
+            print(colorama.Fore.RED + f"{self.datetime.date()}: Close: {round(self.data.close[0],2)}, Trigger Price: {round(self.order.created.price,2)}, Ideal Trigger Price: {round(trigger_price,2)}" + colorama.Fore.RESET)
 
     def notify_order(self, order):
 #         print(f"{self.data.datetime.date(0)}: Type {'Buy ' * order.isbuy() or 'Sell'}, Status {order.getstatusname()}, Size {order.size}, Price: {'NA' if not order.price else round(order.price, 5)}")
