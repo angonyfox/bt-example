@@ -167,7 +167,7 @@ def runstrat():
         perc1=args.perc1,
         perc2=args.perc2,
         valid=args.valid,
-        smaperiod=args.smaperiod
+        smaperiod=int(args.smaperiod)
     )
     cerebro.run()
 
